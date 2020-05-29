@@ -1,0 +1,24 @@
+{
+  "name": "sami",
+  "version": "1.0.0",
+  "description": "Repositório para teste prático na empresa Sami",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craitz/sami.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craitz/sami/issues"
+  },
+  "homepage": "https://github.com/craitz/sami#readme",
+  "dependencies": {
+    "mongodb": "^3.5.8",
+    "restify": "^8.5.1"
+  }
+}
