@@ -50,5 +50,5 @@ server.listen(config.app.port, () => {
 // -- PENDENCIAS --
 // a. retornar links para os recursos criados (hypermedia)
 // b. Utilizar o docker composer para criar um container com 2 serviços: 
-//    (1) Servidor MongDB
+//    (1) Servidor MongoDB
 //    (2) Servidor Web
