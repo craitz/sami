@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "00f9f326-5bf0-44e2-9f3f-7fcee04b2eca",
+		"name": "sami-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllBeneficiaries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/beneficiarios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBeneficiary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/beneficiarios/5ed2f17555ab5391c9771045",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiarios",
+						"5ed2f17555ab5391c9771045"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBeneficiary",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Paulo Silveira\",\n    \"CPF\": \"84457301922\",\n    \"RG\": \"9263744\",\n    \"dataNascimento\": \"1980-05-14\",\n    \"tipoPlano\": 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/beneficiarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBeneficiary",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/beneficiarios/5ed2f17555ab5391c9771045",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiarios",
+						"5ed2f17555ab5391c9771045"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBeneficiary",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Bruno Ferreira\",\n    \"CPF\": \"47763391102\",\n    \"RG\": \"7222666\",\n    \"dataNascimento\": \"2001-04-28T00:00:00.000Z\",\n    \"tipoPlano\": 1,\n    \"numeroDependentes\": 4\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/beneficiarios/5ed2f17555ab5391c9771045",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiarios",
+						"5ed2f17555ab5391c9771045"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
