@@ -6,10 +6,10 @@
 'use strict';
 
 module.exports.paramValidation = function (joi) {
-    function sendBadRequest(res, cause) {
+    function sendBadRequest(res, message) {
         res.send(400, {
-            message: 'Bad Request',
-            cause
+            code: 'BadRequest',
+            message
         });
     };
 
@@ -43,10 +43,10 @@ module.exports.paramValidation = function (joi) {
                 let result = joi.validate(req[i], validation[i], options);
 
                 if (result.error) {
-                    sendBadRequest(res, esult.error.details[0].message);
+                    sendBadRequest(res, result.error.details[0].message);
                     return;
                 } else {
-                    console.log('Parâmetros validados com sucesso');
+                    // Parâmetros validados com sucesso
                 }
             }
         }

@@ -13,8 +13,8 @@ class BeneficiaryController {
 
     sendServerError(res, err) {
         res.send(500, {
-            message: 'Internal Server Error',
-            cause: err
+            code: 'InternalServerError',
+            message: err
         });
     }
 

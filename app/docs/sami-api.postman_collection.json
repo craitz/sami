@@ -15,13 +15,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/beneficiarios/",
+					"raw": "http://localhost:8080/sami-api/beneficiarios/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"sami-api",
 						"beneficiarios",
 						""
 					]
@@ -39,15 +40,16 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/beneficiarios/5ed2f17555ab5391c9771045",
+					"raw": "http://localhost:8080/sami-api/beneficiarios/5ed2f30b55ab5391c9771046",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"sami-api",
 						"beneficiarios",
-						"5ed2f17555ab5391c9771045"
+						"5ed2f30b55ab5391c9771046"
 					]
 				}
 			},
@@ -67,16 +69,17 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Paulo Silveira\",\n    \"CPF\": \"84457301922\",\n    \"RG\": \"9263744\",\n    \"dataNascimento\": \"1980-05-14\",\n    \"tipoPlano\": 2\n}"
+					"raw": "{\n    \"nome\": \"Carina Oliveira\",\n    \"CPF\": \"22233344455\",\n    \"RG\": \"1222333\",\n    \"dataNascimento\": \"1970-08-22\",\n    \"tipoPlano\": 3\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/beneficiarios",
+					"raw": "http://localhost:8080/sami-api/beneficiarios",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"sami-api",
 						"beneficiarios"
 					]
 				}
@@ -93,15 +96,16 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/beneficiarios/5ed2f17555ab5391c9771045",
+					"raw": "http://localhost:8080/sami-api/beneficiarios/5ed3a69bc2ce5b99c5f62dca",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"sami-api",
 						"beneficiarios",
-						"5ed2f17555ab5391c9771045"
+						"5ed3a69bc2ce5b99c5f62dca"
 					]
 				}
 			},
@@ -115,24 +119,25 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Bruno Ferreira\",\n    \"CPF\": \"47763391102\",\n    \"RG\": \"7222666\",\n    \"dataNascimento\": \"2001-04-28T00:00:00.000Z\",\n    \"tipoPlano\": 1,\n    \"numeroDependentes\": 4\n}"
+					"raw": "{\n        \"nome\": \"Roberto Gomes\",\n        \"CPF\": \"88821344455\",\n        \"RG\": \"8734110\",\n        \"dataNascimento\": \"1995-03-12T00:00:00.000Z\",\n        \"tipoPlano\": 2,\n        \"numeroDependentes\": 2\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/beneficiarios/5ed2f17555ab5391c9771045",
+					"raw": "http://localhost:8080/sami-api/beneficiarios/5ed2f376e42a4891d62f0b5b",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"sami-api",
 						"beneficiarios",
-						"5ed2f17555ab5391c9771045"
+						"5ed2f376e42a4891d62f0b5b"
 					]
 				}
 			},

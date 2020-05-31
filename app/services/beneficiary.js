@@ -9,8 +9,8 @@ const modelName = 'Beneficiarios';
 const notFound = {
     httpStatus: 404,
     body: {
-        message: 'Not Found',
-        cause: 'Beneficiário não encontrado'
+        code: 'NotFound',
+        message: 'Beneficiário não encontrado'
     }
 };
 
@@ -25,6 +25,14 @@ class BeneficiaryService {
             httpStatus,
             body
         };
+    }
+
+    buildResponseInvalidDocument(message) {
+        return this.buildResponse(400, {
+            code: 'BadRequest',
+            message: message,
+            obs: 'Em alguns casos é considerado um falha de segurança avisar que um documento já existe na base de dados. Mas, por razões apenas do nosso teste prático, estou mostrando a mensagem aqui'
+        });
     }
 
     // retorna todos os beneficiários
@@ -48,6 +56,20 @@ class BeneficiaryService {
     // cria um beneficiário
     async createBeneficiary(body) {
         const Beneficiaries = this.mongoose.model(modelName);
+
+        // procura por CPF já cadastrado
+        const foundCPF = await Beneficiaries.findOne({ CPF: body.CPF });
+        if (foundCPF) {
+            return this.buildResponseInvalidDocument('CPF já cadastrado');
+        }
+
+        // procura por RG já cadastrado
+        const foundRG = await Beneficiaries.findOne({ RG: body.RG });
+
+        if (foundRG) {
+            return this.buildResponseInvalidDocument('RG já cadastrado');
+        }
+
         const beneficiary = new Beneficiaries(body);
         return this.buildResponse(201, await beneficiary.save());
     }
