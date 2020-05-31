@@ -19,7 +19,7 @@ const server = restify.createServer({
     versions: ['1.0.0']
 });
 
-// cira conexão com a base de dados
+// cria conexão com a base de dados
 const Database = require('./app/configs/database');
 new Database(config.mongo.port, config.mongo.host, config.mongo.name);
 
@@ -39,10 +39,10 @@ server.use(
 // inicializa a validação para todas as chamadas
 server.use(validator.paramValidation(joi));
 
-// Seta as rotas
+// seta as rotas
 routes.register(server, serviceLocator);
 
-// sobe o servidor
+// inicia o servidor web
 server.listen(config.app.port, () => {
     console.log(`Servidor [${config.app.name}] rodando na porta [${config.app.port}]`);
 });
