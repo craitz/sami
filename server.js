@@ -47,7 +47,8 @@ server.listen(config.app.port, () => {
     console.log(`Servidor [${config.app.name}] rodando na porta [${config.app.port}]`);
 });
 
-// // PENDENCIAS
-// // retornar links de objetos criados
-// // retornar links de objetos atualizados
-// // usar docker
+// -- PENDENCIAS --
+// a. retornar links para os recursos criados (hypermedia)
+// b. Utilizar o docker composer para criar um container com 2 serviços: 
+//    (1) Servidor MongDB
+//    (2) Servidor Web
