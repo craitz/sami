@@ -21,7 +21,7 @@ const server = restify.createServer({
 
 // cira conexão com a base de dados
 const Database = require('./app/configs/database');
-new Database(config.mongo.uri);
+new Database(config.mongo.port, config.mongo.host, config.mongo.name);
 
 server.pre(restify.pre.sanitizePath());
 server.use(restify.plugins.acceptParser(server.acceptable));

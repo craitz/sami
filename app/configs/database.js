@@ -8,14 +8,14 @@
 const serviceLocator = require('../lib/service-locator');
 
 class Database {
-    constructor(uri) {
+    constructor(port, host, name) {
         this.mongoose = serviceLocator.get('mongoose');;
-        this._connect(uri);
+        this._connect(port, host, name);
     }
 
-    _connect(uri) {
+    _connect(port, host, name) {
         this.mongoose.Promise = global.Promise;
-        this.mongoose.connect(uri, {
+        this.mongoose.connect(`mongodb://${host}:${port}/${name}`, {
             useUnifiedTopology: true,
             useNewUrlParser: true,
         });
