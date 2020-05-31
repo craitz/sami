@@ -8,7 +8,7 @@
 
 const config = require('../configs/configs')();
 const resourcePath = `${config.api.basePath}/beneficiarios`;
-const controllerName = beneficiaryController;
+const controllerName = 'beneficiaryController';
 
 module.exports.register = (server, serviceLocator) => {
     server.get({
