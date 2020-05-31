@@ -6,6 +6,13 @@
 'use strict';
 
 module.exports.paramValidation = function (joi) {
+    function sendBadRequest(res, cause) {
+        res.send(400, {
+            message: 'Bad Request',
+            cause
+        });
+    };
+
     return function (req, res, next) {
         // permite campos desconhecidos por default.
         let options = {
@@ -25,25 +32,18 @@ module.exports.paramValidation = function (joi) {
         // valida todas as propriedades
         for (let i in validation) {
             if (validProperties.indexOf(i) < 0) {
-                throw new Error('Parâmetros não suportado');
+                sendBadRequest(res, 'Parâmetro não suportado');
+                return;
             } else {
                 if (req[i] === undefined) {
-                    res.send(400, {
-                        message: 'Bad Request',
-                        cause: 'A requisição está vazia'
-                    });
-
+                    sendBadRequest(res, 'A requisição está vazia');
                     return;
                 }
 
                 let result = joi.validate(req[i], validation[i], options);
 
                 if (result.error) {
-                    res.send(400, {
-                        message: 'Bad Request',
-                        cause: result.error.details[0].message
-                    });
-
+                    sendBadRequest(res, esult.error.details[0].message);
                     return;
                 } else {
                     console.log('Parâmetros validados com sucesso');
