@@ -1,3 +1,8 @@
+// ===================================================================================
+// Autor: Camilo Raitz da Silva
+// Descrição: módulo responsável pelo esquema que será usado na validação
+// ===================================================================================
+
 'use strict';
 
 const joi = require('joi');

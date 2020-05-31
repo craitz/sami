@@ -1,3 +1,8 @@
+// =======================================================================
+// Autor: Camilo Raitz da Silva
+// Descrição: módulo responsável pelas configurações gerais da aplicação
+// =======================================================================
+
 'use strict';
 
 module.exports = () => ({
@@ -12,13 +17,8 @@ module.exports = () => ({
         host: process.env.DB_HOST,
         name: process.env.DB_NAME,
         uri: process.env.DB_URI
+    },
+    api: {
+        basePath: '/sami-api'
     }
 });
-
-
-// module.exports = {
-//     endpoint: '/sami',
-//     dbUri: 'mongodb+srv://admin:sami@cluster0-y8wzy.mongodb.net/test?retryWrites=true&w=majority',
-//     resource: 'beneficiarios',
-//     idLength: 24
-// }

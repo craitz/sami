@@ -1,3 +1,8 @@
+// =======================================================================
+// Autor: Camilo Raitz da Silva
+// Descrição: módulo responsável pela especificação do modelo do recurso
+// =======================================================================
+
 'use strict';
 
 const serviceLocator = require('../lib/service-locator');

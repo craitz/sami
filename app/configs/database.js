@@ -1,3 +1,8 @@
+// ==================================================================
+// Autor: Camilo Raitz da Silva
+// Descrição: classe que gerencia a conexão com o servidor MongoDB
+// ===================================================================
+
 'use strict';
 
 const serviceLocator = require('../lib/service-locator');

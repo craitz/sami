@@ -1,3 +1,8 @@
+// ============================================================================
+// Autor: Camilo Raitz da Silva
+// Descrição: módulo executa a validação toda vez que uma requisição é feita
+// ============================================================================
+
 'use strict';
 
 module.exports.paramValidation = function (joi) {
@@ -7,16 +12,17 @@ module.exports.paramValidation = function (joi) {
             allowUnknown: true
         };
 
-        // obtém o objeto de validação
+        // obtém o esquema de validação
         let validation = req.route.spec.validation;
 
-        // pula validação se não houver objeto
+        // pula validação se não houver esquema
         if (!validation) {
             return next();
         }
 
         let validProperties = ['body', 'query', 'params'];
 
+        // valida todas as propriedades
         for (let i in validation) {
             if (validProperties.indexOf(i) < 0) {
                 throw new Error('Parâmetros não suportado');

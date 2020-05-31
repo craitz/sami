@@ -2,7 +2,7 @@
   "name": "sami",
   "version": "1.0.0",
   "description": "Repositório para teste prático na empresa Sami",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/craitz/sami.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Camilo Raitz da Silva",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/craitz/sami/issues"
