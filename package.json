@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/craitz/sami#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "joi": "^14.3.1",
     "mongodb": "^3.5.8",
+    "mongoose": "^5.9.16",
     "restify": "^8.5.1"
   }
 }
