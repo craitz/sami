@@ -14,7 +14,7 @@ Repositório para teste prático na empresa Sami.
 ### 1.5. Iniciar a aplicação
     npm start
 ## 2. Testes
-#### Importar o arquivo de coleção de testes em _./app/docs/_ no Postman e executar as chamadas:  
+#### Importar no Postman o arquivo de coleção de testes localizado em _./app/docs/_, e executar as chamadas:  
     getAllBeneficiaries (GET)
     getBeneficiary (GET)
     createBeneficiary (POST)
