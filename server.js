@@ -48,7 +48,7 @@ server.listen(config.app.port, () => {
 });
 
 // -- PENDENCIAS --
-// a. Criar domínio do MongoDB para os planos de saúde
+// a. Criar domínio no MongoDB para os planos de saúde
 // b. Retornar links para os recursos criados (hypermedia)
 // c. Utilizar o docker composer para criar um container com 2 serviços: 
 //    (1) Servidor MongoDB
