@@ -48,7 +48,8 @@ server.listen(config.app.port, () => {
 });
 
 // -- PENDENCIAS --
-// a. retornar links para os recursos criados (hypermedia)
-// b. Utilizar o docker composer para criar um container com 2 serviços: 
+// a. Criar domínio do MongoDB para os planos de saúde
+// b. Retornar links para os recursos criados (hypermedia)
+// c. Utilizar o docker composer para criar um container com 2 serviços: 
 //    (1) Servidor MongoDB
 //    (2) Servidor Web
